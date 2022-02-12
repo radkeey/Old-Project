@@ -4,16 +4,12 @@ import { NavLink } from "react-router-dom";
 const PageHeader : FunctionComponent = () => {
     return (
         <div>
-        <NavLink to="/PageHome">Home</NavLink>
-        <NavLink to="/PaginaProdutos">PaginaProdutos</NavLink>    
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Pagina-Produtos">PaginaProdutos</NavLink>    
         </div>
         
     )
 }
-
-
-    
-
 export default PageHeader
 
 

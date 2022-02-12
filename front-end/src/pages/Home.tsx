@@ -8,10 +8,10 @@ const PageHome : FunctionComponent = () => {
                <h1>Johson's Store Antiguidades</h1>
                <div>
                   <img src=""  alt=""  />
-                  <h3>
+                  <p>
                         Descrição do produto e <br/>
                         R$ preço
-                  </h3>
+                  </p>
                </div>
 
                <div>

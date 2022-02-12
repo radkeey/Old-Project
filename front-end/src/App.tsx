@@ -12,7 +12,7 @@ const App: FunctionComponent = () => {
 
     <Routes>
       <Route path="/" element={<PageHome/>}/>
-      <Route path="/" element={<PaginaProdutos/>}/>
+      <Route path="/Pagina-Produtos" element={<PaginaProdutos/>}/>
      
     </Routes>
 
