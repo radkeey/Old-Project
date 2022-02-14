@@ -24,7 +24,7 @@ const paginadetalheproduto : FunctionComponent = () => {
             </div>
 
             <ul>
-                <li> <img  src="" alt="" onClick= {} /> </li>
+                <li> <img  src="" alt="" onClick= {.} /> </li>
             </ul>
 
         </PageHF>
