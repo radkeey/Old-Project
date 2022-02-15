@@ -1,8 +1,8 @@
-import { FunctionComponent, useState } from "react";
-import PageHF from "../components/PageHF"; 
+import { FunctionComponent } from "react";
+import PageHF from "../components/PageHF";
 
 
-const paginaDetalheProduto : FunctionComponent = () => {
+const PaginaDetalheProduto: FunctionComponent = () => {
     
     
     return (
@@ -25,10 +25,8 @@ const paginaDetalheProduto : FunctionComponent = () => {
                 </div>
             </div>
 
-            <ul>
                 <li> <img  src="" alt="" /> </li>
 
-            </ul>
             <button> Reserve Aqui </button>
 
             <form>
@@ -44,4 +42,4 @@ const paginaDetalheProduto : FunctionComponent = () => {
         </PageHF>
     )
 }
-export default paginaDetalheProduto
+export default PaginaDetalheProduto

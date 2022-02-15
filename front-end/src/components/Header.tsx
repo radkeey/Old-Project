@@ -5,7 +5,7 @@ const PageHeader : FunctionComponent = () => {
     return (
         <div>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/Pagina-Produtos">PaginaProdutos</NavLink>    
+        <NavLink to="/Pagina-Produtos">Produtos</NavLink>    
         </div>
         
     )
