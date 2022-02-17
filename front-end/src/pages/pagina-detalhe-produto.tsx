@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import PageHF from "../components/PageHF";
+import FormularioReserva from '../components/FormularioReserva'
 
 
 const PaginaDetalheProduto: FunctionComponent = () => {
@@ -10,7 +11,7 @@ const PaginaDetalheProduto: FunctionComponent = () => {
 
             <div>
                <p>
-                   Descrição do produto <br/>
+                  Atari <br/>
                    <span>R$ Preço</span> 
                </p> 
             </div>
@@ -18,27 +19,17 @@ const PaginaDetalheProduto: FunctionComponent = () => {
 
             <div>
                 <p>
-                    Descrição detalhada do produto
+                    Console 1908 balabalabalab.
                 </p>
                 <div>
                     <img src="" alt=""   />
                 </div>
             </div>
 
-                <li> <img  src="" alt="" /> </li>
+            <FormularioReserva />
 
-            <button> Reserve Aqui </button>
 
-            <form>
-                <input placeholder='Nome Completo' />
-                <input placeholder='E-mail' />
-                <input placeholder='Telefone ' />
-               {/*  {
-                    (campoNumeroInvalido) && <small>Apenas dígitos.</small>
-                } */}
-                <button  type="button" >Enviar</button>
-            </form>
-
+     
         </PageHF>
     )
 }
