@@ -21,7 +21,7 @@ const FormularioReserva : FunctionComponent = () => {
 
         {
             (aberto) && (
-                <form style={stylesForm}>
+                <form>
                     <label>Reserve Aqui!</label>
                     <input type="text" placeholder="Nome completo" />
                     <input type="number" placeholder="Telefone" required/>
@@ -35,18 +35,6 @@ const FormularioReserva : FunctionComponent = () => {
     </div>
 
     )
-}
-
-StyleSheet
-
-const styles: ( => CSSProperties) = {
-    form: {
-
-    }
-}
-
-const stylesForm: CSSProperties = {
-    justifyContent: ''
 }
 
 

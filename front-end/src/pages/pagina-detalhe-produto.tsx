@@ -19,7 +19,7 @@ const PaginaDetalheProduto: FunctionComponent = () => {
 
             <div>
                 <p>
-                    Console 1908 balabalabalab.
+                    Console 1908 
                 </p>
                 <div>
                     <img src="" alt=""   />
