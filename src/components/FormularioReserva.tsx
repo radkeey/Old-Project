@@ -1,4 +1,6 @@
 import { CSSProperties, FunctionComponent, MouseEventHandler, useState } from "react";
+import styles from '../components/cssComponentes/formularioReserva.module.css'
+
 
 const FormularioReserva : FunctionComponent = () => {
 
@@ -11,9 +13,9 @@ const FormularioReserva : FunctionComponent = () => {
 
     return (
     
-    <div className="container">
+    <div className={styles.container}>
         {
-            (! aberto) && <button onClick={ botaoAbrirClicado }>Abrir</button>
+            (! aberto) && <button onClick={ botaoAbrirClicado }>Reservar</button>
         }
         {
             (reservado) && <p>Reservado!</p>
@@ -21,12 +23,12 @@ const FormularioReserva : FunctionComponent = () => {
 
         {
             (aberto) && (
-                <form>
+                <form className={styles.form}>
                     <label>Reserve Aqui!</label>
                     <input type="text" placeholder="Nome completo" />
                     <input type="number" placeholder="Telefone" required/>
                     <input type="email" placeholder="E-mail" required/>
-                    <button type="submit"> Confirmar Reservar</button>                    
+                    <button type="submit"> Confirmar Reserva</button>                    
                 </form>
             )
         }

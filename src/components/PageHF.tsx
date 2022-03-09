@@ -7,9 +7,9 @@ const PageHF : FunctionComponent = ({ children }) => {
     return (
         <>
         <PageHeader/>
-        <main> 
-            { children }
-        </main>
+            <main> 
+                { children }
+            </main>
         <PageFooter/>
         </>
  

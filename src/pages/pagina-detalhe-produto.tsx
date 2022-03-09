@@ -7,29 +7,29 @@ const PaginaDetalheProduto: FunctionComponent = () => {
     
     
     return (
-        <PageHF>
-
-            <div>
-               <p>
-                  Atari <br/>
-                   <span>R$ Preço</span> 
-               </p> 
+        <PageHF>          
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="" />
+                </div>
+                <div className="product-info">
+                    <h5>Seu produto aqui!</h5>
+                    <h6>R$Seu preço aqui!</h6>
+                </div>
             </div>
-        
 
-            <div>
-                <p>
-                    Console 1908 
-                </p>
-                <div>
-                    <img src="" alt=""   />
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="" />
+                </div>
+                <div className="product-info">
+                    <h5>Seu produto aqui!</h5>
+                    <h6>R$Seu preço aqui!</h6>
                 </div>
             </div>
 
             <FormularioReserva />
 
-
-     
         </PageHF>
     )
 }
