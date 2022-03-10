@@ -9,7 +9,7 @@ const PaginaDetalheProduto: FunctionComponent = () => {
     return (
         <PageHF>          
             <div className="product-card">
-                <div className="product-imag">
+                <div className="product-image">
                     <img src="" />
                 </div>
                 <div className="product-info">
