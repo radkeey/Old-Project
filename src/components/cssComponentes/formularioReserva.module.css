@@ -1,0 +1,45 @@
+.container{
+    border-radius: 5px;    
+    padding: 20px;
+     
+}
+
+
+.form{
+    width: 25%;
+    padding: 20px 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction:column; 
+    border: 3px solid rgb(247, 0, 0);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+
+
+.form button{
+    background-color: rgb(228, 42, 42);
+    border: 2px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 15px;
+    font-weight: 400yarnm;
+    line-height: 1;
+    margin: 20px;
+    padding: 10px ;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+ 
+.nome, .numero, .email {
+    margin: 7px;
+    border-radius: 7px;
+    padding: 4px;
+}
+
