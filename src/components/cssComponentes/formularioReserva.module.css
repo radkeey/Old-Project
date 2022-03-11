@@ -21,7 +21,7 @@
 .form button{
     background-color: rgb(228, 42, 42);
     border: 2px solid #000000;
-    border-radius: 50px;
+    border-radius: 49px;
     color: #000000;
     cursor: pointer;
     display: flex;

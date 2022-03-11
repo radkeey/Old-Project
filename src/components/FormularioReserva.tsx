@@ -34,6 +34,7 @@ const FormularioReserva : FunctionComponent = () => {
                     <input className={styles.numero} type="number" placeholder="Telefone" required/>
                     <input className={styles.email} type="email" placeholder="E-mail" required/>
                     <button type="button" onClick={botaoReservado}> Confirmar Reserva</button> 
+                    <></>
                                        
                 </form>
             )
