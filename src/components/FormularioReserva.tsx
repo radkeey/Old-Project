@@ -6,9 +6,14 @@ const FormularioReserva : FunctionComponent = () => {
 
     const [aberto, setAberto] = useState(false)
     const [reservado, setReservado] = useState(false)
+    const [reservar, setReservar] = useState(false)
 
     const botaoAbrirClicado: MouseEventHandler = () => {
         setAberto(true)
+    }
+
+    const botaoReservado: MouseEventHandler = () => {
+        setReservado(true)
     }
 
     return (
@@ -25,10 +30,12 @@ const FormularioReserva : FunctionComponent = () => {
             (aberto) && (
                 <form className={styles.form}>
                     <label>Reserve Aqui!</label>
-                    <input type="text" placeholder="Nome completo" />
-                    <input type="number" placeholder="Telefone" required/>
-                    <input type="email" placeholder="E-mail" required/>
-                    <button type="submit"> Confirmar Reserva</button>                    
+                    <input className={styles.nome} type="text" placeholder="Nome completo" />
+                    <input className={styles.numero} type="number" placeholder="Telefone" required/>
+                    <input className={styles.email} type="email" placeholder="E-mail" required/>
+                    <button type="button" onClick={botaoReservado}> Confirmar Reserva</button> 
+                    <></>
+                                       
                 </form>
             )
         }
