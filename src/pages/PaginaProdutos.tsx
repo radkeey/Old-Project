@@ -1,7 +1,19 @@
-import { FunctionComponent } from "react";
-import PageHF from "../components/PageHF"; 
+import { FunctionComponent, useEffect, useState } from "react";
+import PageHF from "../components/PageHF";
+import Categoria from '../models/categoria'
+import servicesCategoria from '../services/categorias'
 
 const PaginaProdutos : FunctionComponent = () => {
+
+  const [categorias, setCategorias] = useState<Categoria[]>([])
+
+  useEffect(() => {
+    servicesCategoria.lerTodas((categorias) => {
+      setCategorias(categorias)
+    })
+  }, [])
+
+
     return (
        <PageHF>
             
@@ -15,6 +27,11 @@ const PaginaProdutos : FunctionComponent = () => {
                 <label>Filtro de:</label>
                 <select>
                   <option value="/">Todos Produtos</option>
+                  {
+                    categorias.map(categoria => (
+                      <option value={categoria.id}>{categoria.nome}</option>
+                    ))
+                  }
                 </select>
               </div>
 
