@@ -1,15 +1,24 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import PageHF from "../components/PageHF";
 import Categoria from '../models/categoria'
+import Produto from '../models/produto'
 import servicesCategoria from '../services/categorias'
+import servicesProdutos from '../services/produtos'
 
 const PaginaProdutos : FunctionComponent = () => {
 
   const [categorias, setCategorias] = useState<Categoria[]>([])
+  const [produtos, setProdutos] = useState<Produto[]>([])
 
   useEffect(() => {
     servicesCategoria.lerTodas((categorias) => {
       setCategorias(categorias)
+    })
+  }, [])
+
+  useEffect(() => {
+    servicesProdutos.lerTodosProdutos((produtos) => {
+      setProdutos(produtos)
     })
   }, [])
 
@@ -29,7 +38,7 @@ const PaginaProdutos : FunctionComponent = () => {
                   <option value="/">Todos Produtos</option>
                   {
                     categorias.map(categoria => (
-                      <option value={categoria.id}>{categoria.nome}</option>
+                      <option key={categoria.id} value={categoria.id}>{categoria.nome}</option>
                     ))
                   }
                 </select>

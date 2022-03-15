@@ -12,10 +12,10 @@ const PageFooter : FunctionComponent = () => {
             </div>  
 
             <div className={styles.botoes}>
-
-                <button className={styles.facebook} >Facebook</button>
-                <button className={styles.instagram}>Instagram</button>
-                <button className={styles.whatsapp}>Whatsapp</button>
+                
+                <a href="https://pt-br.facebook.com/" target="_blank"><button className={styles.facebook} >Facebook</button></a>
+                <a href="https://www.instagram.com/" target="_blank"><button className={styles.instagram}>Instagram</button></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><button className={styles.whatsapp}>Whatsapp</button></a>
             </div>
 
         </div>
