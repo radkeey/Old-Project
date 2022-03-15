@@ -3,7 +3,7 @@ type Produto ={
     nome: string
     preco: string
     descricao: string
-    image: string
+    imagem: string
     idCategoria: number
 }
 
