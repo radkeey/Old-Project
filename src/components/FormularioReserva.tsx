@@ -14,13 +14,14 @@ const FormularioReserva : FunctionComponent = () => {
 
     const botaoReservado: MouseEventHandler = () => {
         setReservado(true)
+        setAberto(false)
     }
 
     return (
     
     <div className={styles.container}>
         {
-            (! aberto) && <button onClick={ botaoAbrirClicado }>Reservar</button>
+            (! reservado) && <button onClick={ botaoAbrirClicado }>Reservar</button>
         }
         {
             (reservado) && <p>Reservado!</p>
