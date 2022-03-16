@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from "react";
+import { ChangeEventHandler, FunctionComponent, useEffect, useState } from "react";
 import PageHF from "../components/PageHF";
 import Categoria from '../models/categoria'
 import Produto from '../models/produto'
@@ -19,6 +19,20 @@ const PaginaProdutos : FunctionComponent = () => {
     })
   }, [])
 
+  const categoriaSelecionada: ChangeEventHandler<HTMLSelectElement> = (event) => {
+    
+    const idCategoria = Number.parseInt(event.target.value)
+    if (idCategoria === 0 || idCategoria === NaN) {
+      servicesProdutos.lerTodosProdutos((produtos) => {
+        setProdutos(produtos)
+      })
+    }
+    else {
+      servicesCategoria.lerTodosProdutos(idCategoria, (produtos) => {
+        setProdutos(produtos)
+      })
+    }
+  }
 
     return (
        <PageHF>
@@ -29,8 +43,8 @@ const PaginaProdutos : FunctionComponent = () => {
 
               <div className="collection-sort">
                 <label>Filtro de:</label>
-                <select>
-                  <option value="/">Todos Produtos</option>
+                <select onChange={categoriaSelecionada}>
+                  <option value="0">Todas Categorias</option>
                   {
                     categorias.map(categoria => (
                       <option key={categoria.id} value={categoria.id}>{categoria.nome}</option>

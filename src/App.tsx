@@ -11,7 +11,7 @@ const App: FunctionComponent = () => {
 
     <Routes>
       <Route path="/" element={<PaginaProdutos/>}/>
-      {/* <Route path="/Detalhe-Produto" element={<PaginaDetalheProduto/>}/> */}
+      <Route path="/Detalhe-Produto/:id" element={<PaginaDetalheProduto/>}/>
      
     </Routes>
 

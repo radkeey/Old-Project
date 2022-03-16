@@ -16,14 +16,6 @@ const servicesProdutos = {
         })
     },
 
-    lerProdutosporCategoria: (idCategoria: number, callback : lerProdutos) => {
-        axios.get<Produto[]>(`${servicesConfig.backendUrl}/categorias/${idCategoria}/produtos`)
-        .then((res) => {
-            const produtosPorCategoria: Produto[] = res.data
-            callback(produtosPorCategoria)
-        })
-    },
-
     lerProduto: (id: number, callback: lerProduto) => {
         axios.get<Produto>(`${servicesConfig.backendUrl}/produtos/${id}`)
         .then((resp) => {
