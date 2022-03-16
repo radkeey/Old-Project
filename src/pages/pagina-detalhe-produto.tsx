@@ -3,18 +3,18 @@ import PageHF from "../components/PageHF";
 import FormularioReserva from "../components/FormularioReserva"
 import Produto from "../models/produto"
 import servicesProdutos from "../services/produtos"
-
+import { useParams } from "react-router-dom";
 
 const PaginaDetalheProduto: FunctionComponent = () => {
     
-   // const id = (Pegar o link com useRouter)
+   const { id } = useParams()
 
-   const [produtos, setProdutos] = useState<Produto[]>([])
+   const [produto, setProduto] = useState<Produto>()
 
     useEffect(() => {
-        servicesProdutos.lerTodosProdutos((produtos) => {
-            setProdutos(produtos)
-        })
+        servicesProdutos.lerProduto(Number.parseInt(id ?? '0'), (produto) => {
+            setProduto(produto)
+        }) 
     }, [])
     
     
@@ -23,11 +23,11 @@ const PaginaDetalheProduto: FunctionComponent = () => {
               
             <div className="product-card">
                 <div className="product-image">
-                    <img src="" />
+                    <img src={produto?.imagem} />
                 </div>
                 <div className="product-info">
-                    <h5>Seu produto aqui!</h5>
-                    <h6>R$Seu preço aqui!</h6>
+                    <h5>{produto?.nome}</h5>
+                    <h6>{produto?.preco}</h6>
                 </div>
             </div>
 

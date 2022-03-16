@@ -1,4 +1,5 @@
 import { ChangeEventHandler, FunctionComponent, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import PageHF from "../components/PageHF";
 import Categoria from '../models/categoria'
 import Produto from '../models/produto'
@@ -59,15 +60,17 @@ const PaginaProdutos : FunctionComponent = () => {
 
             {
               produtos.map(produto => (
-                <div className="product-card" key={produto.id}>
-                  <div className="product-image">
-                    <img src={produto.imagem} />
+                  <div className="product-card" key={produto.id}>
+                    <div className="product-image">
+                      <a href={`/Detalhe-Produto/${produto.id}`}>
+                        <img src={produto.imagem} />
+                      </a>
+                    </div>
+                    <div className="product-info">
+                      <h5><a>{produto.nome}</a></h5>
+                      <h6>{produto.preco}</h6>
+                    </div>
                   </div>
-                  <div className="product-info">
-                    <h5>{produto.nome}</h5>
-                    <h6>{produto.preco}</h6>
-                  </div>
-                </div>
               ))
             }
             
