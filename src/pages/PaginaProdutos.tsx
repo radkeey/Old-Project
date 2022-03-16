@@ -27,8 +27,6 @@ const PaginaProdutos : FunctionComponent = () => {
 
             <h1>Produtos</h1>
 
-            <div className="sort">
-
               <div className="collection-sort">
                 <label>Filtro de:</label>
                 <select>
@@ -40,16 +38,7 @@ const PaginaProdutos : FunctionComponent = () => {
                   }
                 </select>
               </div>
-
-              <div className="collection-sort">
-                <label>Ordenar por:</label>
-                <select>
-                  <option value="/">Destaques</option>
-                </select>
-              </div>
-
-            </div>
-
+           
           </nav>
 
           <section className="products">

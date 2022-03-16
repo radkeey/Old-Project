@@ -10,8 +10,7 @@ const App: FunctionComponent = () => {
     <BrowserRouter>
 
     <Routes>
-      <Route path="/" element={<PaginaDetalheProduto/>}/>
-      <Route path="/Pagina-Produtos" element={<PaginaProdutos/>}/>
+      <Route path="/" element={<PaginaProdutos/>}/>
       {/* <Route path="/Detalhe-Produto" element={<PaginaDetalheProduto/>}/> */}
      
     </Routes>

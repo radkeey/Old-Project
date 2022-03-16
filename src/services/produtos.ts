@@ -1,14 +1,34 @@
 import axios from "axios"
 import Produto from "../models/produto"
+import Categoria from "../models/categoria"
 import servicesConfig from './config'
 
-type lerTodosProdutos = (produto: Produto[]) => void
-const servicesProdutos ={
-    lerTodosProdutos: (callback: lerTodosProdutos) => {
+type lerProdutos = (produto: Produto[]) => void
+type lerProduto = (produto: Produto) => void
+
+const servicesProdutos = {
+
+    lerTodosProdutos: (callback: lerProdutos) => {
         axios.get<Produto[]>(`${servicesConfig.backendUrl}/produtos`)
         .then((res) => {
             const produtos: Produto[] = res.data
             callback(produtos)
+        })
+    },
+
+    lerProdutosporCategoria: (idCategoria: number, callback : lerProdutos) => {
+        axios.get<Produto[]>(`${servicesConfig.backendUrl}/categorias/${idCategoria}/produtos`)
+        .then((res) => {
+            const produtosPorCategoria: Produto[] = res.data
+            callback(produtosPorCategoria)
+        })
+    },
+
+    lerProduto: (id: number, callback: lerProduto) => {
+        axios.get<Produto>(`${servicesConfig.backendUrl}/produtos/${id}`)
+        .then((resp) => {
+            const produto: Produto = resp.data
+            callback(produto)
         })
     }
 }
