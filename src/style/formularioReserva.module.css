@@ -1,5 +1,6 @@
 .container{
-    
+    display: flex;
+    justify-content: center;
     border-radius: 5px;    
     padding: 20px;
      
@@ -45,7 +46,7 @@
 
 
 .form{
-    width: 25%;
+    
     padding: 20px 20px;
     font-family: sans-serif;
     display: flex;
