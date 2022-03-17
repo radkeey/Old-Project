@@ -1,0 +1,21 @@
+.containerDetalheProduto{
+    box-shadow: 0 8px 20px 0 black;          
+    margin: 50px;   
+    border-radius: 15px;
+}
+
+.cardProduto{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.descricao{
+    border-top: 1px solid #C4C4C4;    
+    text-align: center;    
+}
+
+
+.descricao h6, h5{
+    margin: 0;    
+}

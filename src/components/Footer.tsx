@@ -11,13 +11,20 @@ const PageFooter : FunctionComponent = () => {
                 </p>
             </div>  
 
-            <div className={styles.botoes}>
+            <div className={styles.images}>
+                <a href="https://pt-br.facebook.com/" target="_blank">
+                    <img src="/content/face.png" alt=""width="50" height="50"/>
+                </a>
                 
-                <a href="https://pt-br.facebook.com/" target="_blank"><button className={styles.facebook} >Facebook</button></a>
-                <a href="https://www.instagram.com/" target="_blank"><button className={styles.instagram}>Instagram</button></a>
-                <a href="https://www.whatsapp.com/" target="_blank"><button className={styles.whatsapp}>Whatsapp</button></a>
-            </div>
+                <a href="https://whatsapp.com/" target="_blank">
+                    <img src="/content/whatsapp.png" alt="" width="50" height="50"/>
+                </a>
 
+                <a href="https://instagram.com/" target="_blank">
+                    <img src="/content/insta.png" alt=""width="55" height="55"/>
+                </a>
+                
+            </div>
         </div>
     )
 }

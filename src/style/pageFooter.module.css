@@ -3,7 +3,7 @@
 	flex-wrap: wrap-reverse;       
 }
 
-.botoes{
+.images{
     justify-content: center;    
     display:flex;    
 	margin: auto;
@@ -108,7 +108,7 @@
 	text-align: center;
     color: #000000;
 	font-size:small;
-    font-family: 'Montserrat', sans-serif;
+    font-family: ;
     font-weight: 700;
 
 }
