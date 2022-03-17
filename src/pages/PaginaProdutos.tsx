@@ -43,7 +43,7 @@ const PaginaProdutos : FunctionComponent = () => {
             <h1 className={styles.titulo}>Produtos</h1>
 
               <div className={styles.filtroCategoria}>
-                <label>Filtro de:</label>
+                <label>Categorias: </label>
                 <select onChange={categoriaSelecionada}>
                   <option value="0">Todas Categorias</option>
                   {
