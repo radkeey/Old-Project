@@ -1,10 +1,10 @@
 import { ChangeEventHandler, FunctionComponent, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import PageHF from "../components/PageHF";
 import Categoria from '../models/categoria'
 import Produto from '../models/produto'
 import servicesCategoria from '../services/categorias'
 import servicesProdutos from '../services/produtos'
+import styles from "../style/paginaProdutos.module.css"
 
 const PaginaProdutos : FunctionComponent = () => {
 
@@ -38,11 +38,11 @@ const PaginaProdutos : FunctionComponent = () => {
     return (
        <PageHF>
             
-          <nav className="product-filter">
+          <nav>
 
-            <h1>Produtos</h1>
+            <h1 className={styles.titulo}>Produtos</h1>
 
-              <div className="collection-sort">
+              <div className={styles.filtroCategoria}>
                 <label>Filtro de:</label>
                 <select onChange={categoriaSelecionada}>
                   <option value="0">Todas Categorias</option>
@@ -56,21 +56,23 @@ const PaginaProdutos : FunctionComponent = () => {
            
           </nav>
 
-          <section className="products">
+          <section>
 
             {
               produtos.map(produto => (
-                  <div className="product-card" key={produto.id}>
-                    <div className="product-image">
+                <div className={styles.containerProduto}>
+                  <div className={styles.cardProduto} key={produto.id}>
+                    <div>
                       <a href={`/Detalhe-Produto/${produto.id}`}>
                         <img src={produto.imagem} />
                       </a>
                     </div>
-                    <div className="product-info">
-                      <h5><a>{produto.nome}</a></h5>
+                    <div className={styles.descricao}>
+                      <h5>{produto.nome}</h5>
                       <h6>{produto.preco}</h6>
                     </div>
                   </div>
+                </div>
               ))
             }
             

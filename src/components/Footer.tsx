@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from '../components/cssComponentes/pageFooter.module.css'
+import styles from '../style/pageFooter.module.css'
 
 const PageFooter : FunctionComponent = () => {
     return (

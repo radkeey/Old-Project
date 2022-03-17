@@ -1,14 +1,13 @@
 .container{      
     margin: 0 auto;
-	border: 1px solid rgb(48, 43, 43);
-    flex-wrap: wrap-reverse;       
+	flex-wrap: wrap-reverse;       
 }
 
 .botoes{
     justify-content: center;    
     display:flex;    
 	margin: auto;
-	background: rgb(184, 179, 179);
+	background: #C4C4C4;
 	text-align: center;
 	
 }
@@ -105,8 +104,11 @@
     justify-content: center;
     display:flex;    
 	margin: auto;
-	background: rgb(109, 107, 107);
+	background: #C4C4C4;
 	text-align: center;
-    color: #dbcbcb;
+    color: #000000;
 	font-size:small;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+
 }

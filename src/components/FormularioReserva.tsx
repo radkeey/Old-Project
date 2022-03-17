@@ -1,5 +1,5 @@
 import { CSSProperties, FunctionComponent, MouseEventHandler, useState } from "react";
-import styles from '../components/cssComponentes/formularioReserva.module.css'
+import styles from '../style/formularioReserva.module.css'
 
 
 const FormularioReserva : FunctionComponent = () => {

@@ -1,0 +1,37 @@
+
+.titulo{
+    background: #C4C4C4;
+    text-align: center;
+    font-size: 42px;
+}
+
+section{
+  flex-wrap: wrap;  
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  justify-content: center; 
+  margin-left: 100px;
+  margin-right: 100px;  
+        
+}
+
+.containerProduto{
+    box-shadow: 0 8px 20px 0 black;          
+    margin: 50px;   
+    border-radius: 15px;  
+}
+
+.cardProduto {       
+    margin: 10px;    
+}
+
+.descricao{
+    border-top: 1px solid #C4C4C4;    
+    text-align: center;    
+}
+
+
+.descricao h6, h5{
+    margin: 0;    
+}
